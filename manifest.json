@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "FA Download Manager",
+  "version": "1.0",
+ 
+  "description": "Downloads and clears your submission queue to an organized set of folders.",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "luchas.wolf@gmail.com",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*furaffinity.net/msg/submissions/*"],
+      "js": ["fadownload.js"]
+    }
+  ]
+
+}
